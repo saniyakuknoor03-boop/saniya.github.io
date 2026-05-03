@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery Website</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome (for menu icon) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <a href="#" class="logo">Bakery</a>
+
+    <input type="checkbox" id="toggler">
+    <label for="toggler" class="fas fa-bars"></label>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#products">products</a>
+         <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="icons">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-shopping-cart"></a>
+        <a href="#" class="fas fa-user"></a>
+    </div>
+
+</header>
+
+<!-- HOME SECTION -->
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>Freshly Baked</h3>
+        <span>Delicious Cakes</span>
+        <p>We make the best cakes with love and passion. Fresh ingredients and perfect taste for every occasion.</p>
+        <a href="#" class="btn">Best Cake Sellers</a>
+    </div>
+
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about" id="about">
+
+    <h1 class="heading">About <span>Us</span></h1>
+
+    <div class="row">
+
+        <!-- VIDEO -->
+        <div class="video-container">
+            <video src="gif.mp4" loop autoplay muted></video>
+            <h3>Our Bakery</h3>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="content">
+            <h3>Why Choose Us?</h3>
+            <p>We provide fresh and tasty cakes made with high quality ingredients. Our bakery focuses on taste, hygiene and customer satisfaction.</p>
+            <p>Perfect for birthdays, weddings and all special occasions.</p>
+        </div>
+
+    </div>
+
+    <section class="icons-container">
+
+    <div class="icons">
+        <img src="images/icon-1.png" alt="">
+        <div class="info">
+            <h3>free delivery</h3>
+            <span>on all orders</span>
+        </div>
+    </div>
+
+    <div class="icons">
+        <img src="images/icon-2.png" alt="">
+        <div class="info">
+            <h3>10 days returns</h3>
+            <span>moneyback guarantee</span>
+        </div>
+    </div>
+
+    <div class="icons">
+        <img src="images/icon-3.png" alt="">
+        <div class="info">
+            <h3>offer & gifts</h3>
+            <span>on all orders</span>
+        </div>
+    </div>
+
+    <div class="icons">
+        <img src="images/icon-4.png" alt="">
+        <div class="info">
+            <h3>secure payments</h3>
+            <span>protected by paypal</span>
+        </div>
+    </div>
+
+</section>
+<section class="products" id="products">
+
+    <h1 class="heading">latest <span>products</span></h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <span class="discount">10%</span>
+            <div class="image">
+                <img src="3.jpeg" alt="Anniversary Mini Cake">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Anniversary Mini Cake</h3>
+                <div class="price">₹500 <span>₹699</span></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">10%</span>
+            <div class="image">
+                <img src="2.jpeg" alt="Mixed Berry Cheesecake">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Mixed Berry Cheesecake</h3>
+                <div class="price">₹299<span>₹399</span></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">10%</span>
+            <div class="image">
+                <img src="1.jpeg" alt="Berry & Cream Waffles">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="javascript:void(0)" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Berry & Cream Waffles</h3>
+                <div class="price">₹299 <span>₹399</span></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">10%</span>
+            <div class="image">
+                <img src="4.jpeg" alt="Powdered Jam Donuts">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Powdered Jam Donuts</h3>
+                <div class="price">₹199 <span>₹299</span></div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="contact" id="contact">
+
+    <h1 class="heading">contact <span>us</span></h1>
+
+    <form id="contactForm">
+
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <input type="number" id="phone" placeholder="Your Phone Number" required>
+
+        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+
+        <button type="submit">send message</button>
+
+    </form>
+
+</section>
+<script src="script.js"></script>
+
+</body>
+</html>

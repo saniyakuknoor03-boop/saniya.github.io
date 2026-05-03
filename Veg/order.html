@@ -1,0 +1,99 @@
+<!-- ORDER FORM MODAL -->
+
+
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      padding: 20px; 
+      background: #161a12;
+    }
+    h2 {
+      text-align: center;
+      color: #2e7d32;
+    }
+    form { 
+      max-width: 400px; 
+      margin: auto; 
+      background: #03330a; 
+      padding: 20px; 
+      border-radius: 10px; 
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    input, textarea, select { 
+      width: 100%; 
+      padding: 10px; 
+      margin: 10px 0; 
+      border: 1px solid #042503; 
+      border-radius: 5px;
+    }
+    button { 
+      background: #2e7d32; 
+      color: rgb(2, 14, 5); 
+      padding: 12px; 
+      border: none; 
+      border-radius: 5px; 
+      width: 100%; 
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #8dd78d;
+    }
+    /* Celebration popup */
+    .success-popup {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+    .success-message {
+      background: #000000;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 18px;
+      color: #2e7d32;
+      animation: pop 0.5s ease;
+    }
+    @keyframes pop {
+      from { transform: scale(0.7); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+<div id="orderFormModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+
+    <h2>Place Your Order</h2>
+
+    <form id="orderForm">
+      <input type="hidden" id="selectedItemName">
+
+      <input type="text" id="customerName" placeholder="Full Name" required>
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+      <textarea id="address" placeholder="Delivery Address" required></textarea>
+
+      <input type="number" id="quantity" placeholder="Quantity (kg)" required>
+
+      <select id="payment" required>
+        <option value="">Payment Method</option>
+        <option>Cash on Delivery</option>
+        <option>Online Payment</option>
+      </select>
+
+      <button type="submit">Submit Order</button>
+    </form>
+  </div>
+</div>
+<script>
+  document.getElementById("orderForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    alert("Submit successfully");
+    this.reset();
+  });
+</script>

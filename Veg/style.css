@@ -1,0 +1,464 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #010d00;
+  color: #fff;
+}
+
+/* Navbar */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: #15320d;
+  padding: 1rem 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 2rem;
+  color: #d6d6d6;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+header .navbar a {
+  font-size: 1.4rem;
+  margin: 0 0.8rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+header .navbar a:hover {
+  color: #ffd166;
+}
+
+header .icons a {
+  font-size: 1.6rem;
+  margin-left: 1rem;
+  color: #fff;
+}
+
+header #toggler {
+  display: none;
+}
+
+header label {
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+/* Responsive Navbar */
+@media (max-width: 991px) {
+  header {
+    padding: 1rem 2rem;
+  }
+  header label {
+    display: block;
+  }
+  header .navbar {
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: #0f2a07;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+  }
+  header #toggler:checked ~ .navbar {
+    display: flex;
+  }
+  header .navbar a {
+    margin: 1rem;
+    font-size: 1.6rem;
+  }
+}
+
+/* Home Section */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 100vh;
+  padding: 10rem 9% 2rem; /* extra top padding so text isn’t hidden */
+  position: relative;
+  flex-wrap: wrap;
+  background: #010d00;
+}
+
+.home .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5); /* dark overlay */
+  z-index: 1;
+}
+
+.home .content {
+  flex: 1 1 40rem;
+  text-align: left;
+  position: relative;
+  z-index: 2; /* keeps text above overlay */
+}
+
+.home .content h3 {
+  font-size: 4rem;
+  color: #ffffff; /* bright white */
+}
+
+.home .content span {
+  font-size: 2.5rem;
+  color: #ffd166; /* bright accent */
+}
+
+.home .content p {
+  font-size: 1.6rem;
+  margin: 1rem 0;
+  color: #e0e0e0;
+}
+
+.home .image {
+  flex: 1 1 40rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.home .image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  border-radius: 5rem;
+  background: #437e38;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #2c4c11;
+}
+
+/* Products Section */
+.products {
+  padding: 10rem 9% 5rem;
+  background: #010d00; /* keep consistent with site */
+  color: #fff;         /* ensure text is visible */
+}
+
+.products .heading {
+  text-align: center;
+  font-size: 3rem;
+  color: #6dbd63;
+  margin-bottom: 2rem;
+}
+
+.products .heading span {
+  color: #ffd166;
+}
+
+.products .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.products .box {
+  flex: 1 1 25rem;
+  background: #15320d;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.products .box .discount {
+  position: absolute;
+  background: #ffd166;
+  color: #000;
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.products .box .image {
+  position: relative;
+  text-align: center;
+}
+
+.products .box .image img {
+  width: 100%;
+  height: 250px;        /* fixed height for all images */
+  object-fit: cover;    /* crops to fit without distortion */
+  border-radius: 0.5rem;
+}
+
+.products .box .image .icons {
+  position: absolute;
+  bottom: 1rem;
+  left: 0; right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.products .box .image .icons a {
+  background: #437e38;
+  color: #fff;
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+.products .box .image .icons a:hover {
+  background: #2c4c11;
+}
+
+.products .box .content {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.products .box .content h3 {
+  font-size: 2rem;
+  color: #ffd166;
+}
+
+.products .box .content .price {
+  font-size: 1.6rem;
+  margin-top: 0.5rem;
+}
+
+.products .box .content .price span {
+  text-decoration: line-through;
+  color: #ccc;
+  font-size: 1.4rem;
+}
+
+/* Order Form */
+.order-form {
+  max-width: 500px;
+  margin: 8rem auto;   /* centers the form horizontally */
+  padding: 2rem;
+  background: #15320d;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
+  color: #fff;
+}
+
+.order-form label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  font-size: 1.6rem;
+  color: #ffd166;
+}
+
+.order-form input,
+.order-form textarea {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.order-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.order-form .btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.7rem;
+  border-radius: 5rem;
+  background: #437e38;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.order-form .btn:hover {
+  background: #2c4c11;
+}
+.success {
+  color: #4CAF50;
+  font-size: 1.6rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.error {
+  color: #f44336;
+  font-size: 1.6rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  border-radius: 5rem;
+  background: #437e38;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #2c4c11;
+}
+.order-table {
+  width: 90%;
+  margin: 2rem auto;
+  border-collapse: collapse;
+  background: #15320d;
+  color: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
+}
+
+.order-table th, .order-table td {
+  border: 1px solid #437e38;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.order-table th {
+  background: #437e38;
+  color: #ffd166;
+}
+
+.order-table tr:nth-child(even) {
+  background: #1f3d17;
+}
+
+.order-table tr:hover {
+  background: #2c4c11;
+}
+
+.order-table .btn {
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  border-radius: 0.5rem;
+  background: #ffd166;
+  color: #000;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.order-table .btn:hover {
+  background: #ffb347;
+}
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close-btn {
+    float: right;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+button {
+    padding: 10px;
+    background: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close-btn {
+    float: right;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+button {
+    padding: 10px;
+    background: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
